@@ -4,7 +4,7 @@
 	bare = false
 	logallrefupdates = true
 [remote "origin"]
-	url = https://github.com/ziminsergey/sf_repo.git
+	url = git@github.com:ziminsergey/sf_repo.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "master"]
 	remote = origin
@@ -12,5 +12,6 @@
 [user]
 	name = Zimin Sergey
 	email = whataboutzi@gmail.com
+	signingKey = --help
 [alias]
   history = log --graph
