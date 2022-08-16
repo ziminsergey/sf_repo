@@ -35,6 +35,11 @@ git config --list
 
 Пример конфигурационного файла для Git можно найти в [корне репозитория](https://github.com/ziminsergey/sf_repo/blob/master/config).
 
+Для работы по SSH-ключу выполнить команду из локальной копии репозитория:
+```
+git remote set-url origin git@github.com:username/your-repository.git
+```
+
 
 ## Инструкция по работе с репозиторием.
 
