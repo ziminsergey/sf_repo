@@ -9,9 +9,7 @@ terraform {
     endpoint   = "storage.yandexcloud.net"
     bucket     = "tf-bucket-zimin-sf"
     region     = "ru-central1-a"
-    key        = "SF/lamplemp.tfstate"
-    access_key = var.access_key
-    secret_key = var.secret_key
+    key        = "SF/nlbcluster.tfstate"
 
     skip_region_validation      = true
     skip_credentials_validation = true
