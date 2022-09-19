@@ -10,8 +10,8 @@ terraform {
     bucket     = "tf-bucket-zimin-sf"
     region     = "ru-central1-a"
     key        = "SF/lamplemp.tfstate"
-    access_key = "YCAJEPxLV263ngdHUWRV7gQSi"
-    secret_key = "YCPtqpZy7lGCDoW3rMuwDAJ3MK8WL2LJnPh41goD"
+    access_key = var.access_key
+    secret_key = var.secret_key
 
     skip_region_validation      = true
     skip_credentials_validation = true
