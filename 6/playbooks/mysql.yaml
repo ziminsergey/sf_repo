@@ -1,0 +1,10 @@
+---
+- hosts: docker
+  become: true
+
+  tasks:
+  - name: check start of mysql service
+    service:
+      name: mysql
+      state: started
+      enabled: yes
