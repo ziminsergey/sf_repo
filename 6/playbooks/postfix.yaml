@@ -1,0 +1,18 @@
+---
+- hosts: docker
+  become: true
+
+  tasks:
+  - name: install postfix
+    apt:
+      name: postfix
+      state: present
+      update_cache: yes
+    tags: init postfix
+
+  - name: uninstall postfix
+    apt:
+      name: postfix
+      state: absent
+    tags: drop postfix
+  

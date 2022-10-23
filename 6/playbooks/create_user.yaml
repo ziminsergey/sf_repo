@@ -1,0 +1,26 @@
+---
+- hosts: docker
+  become: true
+  vars:
+    ssh_key_file: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          38656466373161663034646337623838323933623563313363336637613465663731383766393066
+          3964613339636238323931373137393962633230613663640a646231383236303366343630313335
+          35333266643036323037643764656664656633396438396339663233303231356264643561626231
+          3338306162636166610a396433323038323338373030616335626362643766653636303635303138
+          3538
+
+  tasks:
+  - name: create user1
+    ansible.builtin.user:
+      name: user1
+      shell: /bin/bash
+      groups: sudo,docker
+      append: yes
+
+  - name: generate ssh key for user1
+    ansible.builtin.user:
+      name: user1
+      generate_ssh_key: yes
+      ssh_key_bits: 2048
+      ssh_key_file: "{{ ssh_key_file }}"
